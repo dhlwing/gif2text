@@ -1,0 +1,24 @@
+{
+    "name": "bigweb/gif2text",
+    "autoload": {
+        "psr-4": {
+            "Bigweb\\Gif2text\\": "src/"
+        }
+    },
+    "require-dev": {
+        "docopt/docopt": "dev-master",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bigweb\\Gif2text\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "intervention/image": "~2.3"
+    },
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ]
+}

@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+
+<?php
+$doc = <<<'DOC'
+
+Usage:
+  gif2text <imgfile> 
+  gif2text (-h | --help)
+DOC;
+
+require __DIR__.'/vendor/autoload.php';
+$args = Docopt::handle($doc);
+if ($args->args['<imgfile>']) {
+    $template = __DIR__ . '/template.html';
+
+    $img = new Bigweb\Gif2text\Gif2text($args->args['<imgfile>'], $template);
+    echo $img->render();
+}

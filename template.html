@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      pre {
+        white-space: pre-wrap;
+        line-height: 1.0;
+        font-size: 7px;
+        font-family: 'Menlo', 'Courier New', 'Consola';
+      }
+    </style>
+</head>
+<body>
+  <?php foreach ($strings as $index => $string):  ?>
+  <pre id="<?php echo $index+1; ?>" <?php if ($index+1 > 0): ?>style="display: none"<?php endif; ?>><?php echo $string; ?>
+  </pre>
+  <?php endforeach; ?>
+  <script>
+    var id = 1;
+    setInterval(function() {
+      document.getElementById(id.toString()).style.display = 'none';
+      id = id + 1;
+      if (id > <?php echo count($strings); ?>) id = 1;
+      document.getElementById(id.toString()).style.display = 'block';
+    }, 65);
+  </script>
+</body>
+</html>
