@@ -36,12 +36,10 @@ You also can use it anywhere what you want at your application like this:
 use Bigweb\Gif2text\Gif2text;
 
 $options = [
-        'ansi'     => ,
-        'color'    => 1,
-        'fontSize' => 7,
         'maxLen'   => 100,
     ];
-$img = new Gif2text($gifPath, $template);
+$template = __DIR__ . '/template.html';
+$img = new Gif2text($gifPath, $template, $options);
 echo $img->render();
 ```
 
