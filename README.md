@@ -1,7 +1,8 @@
 gif2text
 =======
 
-Gif image to to Ascii Text..
+Gif image to Ascii Text..
+
 See also [img2text](https://github.com/dhlwing/img2text)
 
 
